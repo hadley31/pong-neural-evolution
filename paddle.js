@@ -73,13 +73,13 @@ class AIPaddle extends Paddle {
 	constructor(config) {
 		super(config.x, config.w, config.h, config.speed);
 		this.config = config;
-		this.brain = config.brain || new NeuralNetwork(6, 5, 2);
+		this.brain = config.brain || new NeuralNetwork(4, 10, 2);
 	}
 
 	update() {
 		let ball = this.game.ball;
 
-		let inputs = [this.x, this.y, ball.x, ball.y, ball.velocity.x, ball.velocity.y];
+		let inputs = [abs (this.x - ball.x), ball.y - this.y, ball.velocity.x, ball.velocity.y];
 
 		//* Sync
 
