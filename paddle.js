@@ -66,7 +66,7 @@ const PADDLE_CONFIG = {
 	x: 20,
 	w: 10,
 	h: 100,
-	speed: 3
+	speed: 5
 }
 
 class AIPaddle extends Paddle {
