@@ -70,13 +70,13 @@ class Generation {
 
 		console.log("Highest fitness: " + nf(this.agents[0].getFitness(), 1, 1));
 
-		let top = this.agents.slice(0, 4);
+		let top = this.agents.slice(0, live_on_amount);
 
 		for (let i = 0; i < top.length; i++) {
 			nextGen.push(top[i].clone());
 		}
 
-		for (let i = 0; nextGen.length < this.agents.length; i++) {
+		while (nextGen.length < this.agents.length) {
 			let p1 = this.pickOne ();
 			let p2 = this.pickOne ();
 

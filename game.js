@@ -71,6 +71,6 @@ class Game
 
 	isDone ()
 	{
-		return this.paddle_one.goals >= 5 || this.paddle_two.goals >= 5;
+		return this.paddle_one.goals >= max_score || this.paddle_two.goals >= max_score;
 	}
 }
