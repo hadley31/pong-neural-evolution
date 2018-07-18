@@ -11,7 +11,7 @@ let games;
 let iterations = 1;
 
 let max_score = 5;
-let live_on_amount = 1;
+let live_on_amount = 2;
 
 //#region Setup / Draw
 
